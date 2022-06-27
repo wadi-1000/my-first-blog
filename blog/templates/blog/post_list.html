@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -9,113 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <title>Wadi's blog</title>
 </head>
-<style>
-    body {
-        font-family: 'Source Code Pro', monospace;
-        font-weight: 700;
-        font-size: 14px;
-        display: block;
-        background: inherit;
-    }
 
-    #border {
-        border: 2px solid black;
-        border-radius: 5px;
-        max-width: 100%;
-    }
-
-    nav {
-        background-color: rgb(32, 32, 32);
-        font-family: 'Source Code Pro', monospace;
-        width: auto;
-        border-radius: 3px;
-
-    }
-
-    .welcome {
-        font-size: 2em;
-
-    }
-
-    nav ul {
-        overflow: hidden;
-        margin: 0%;
-        list-style-type: none;
-    }
-
-    nav li {
-        float: left;
-    }
-
-    nav li a {
-        padding: 14px 16px;
-        display: block;
-        text-align: center;
-        color: white;
-        font-family: cursive;
-        font-size: 1.2em;
-        text-decoration: none;
-        font-family: 'Source Code Pro';
-        font-weight: bold;
-    }
-
-    a:hover {
-        color: rgb(226, 221, 221);
-    }
-
-    #brand {
-        font-weight: 5px;
-        margin-top: 3px;
-        font-family: 'Source Code Pro';
-        font-size: 25px;
-        color: rgb(255, 255, 255);
-    }
-
-    #landing {
-
-        background-color: white;
-        /* Used if the image is unavailable */
-        height: 500px;
-        /* You must set a specified height */
-        background-position: center;
-        /* Center the image */
-        background-repeat: no-repeat;
-        /* Do not repeat the image */
-        background-size: cover;
-        /* Resize the background image to cover the entire container */
-        color: black;
-        font-weight: bold;
-        text-align: center;
-        padding: 80px 10px;
-        font-family: 'Source Code Pro', monospace;
-        font-size: 2em;
-        border: 2px solid black;
-        border-radius: 5px;
-        max-width: 100%;
-        margin: 18px;
-    }
-
-    #cards img {
-        width: 355px;
-        height: 50%;
-    }
-
-    card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        /* this adds the "card" effect */
-        padding: 16px;
-        text-align: center;
-        background-color: lightgray;
-    }
-
-  
-</style>
+{% for post in posts %}
+<article>
+    <time>published: {{ post.published_date }}</time>
+    <h2><a href="">{{ post.title }}</a></h2>
+    <p>{{ post.text|linebreaksbr }}</p>
+</article>
+{% endfor %}
 
 <body>
-    <nav>
+    <!-- <nav>
         <div class="container">
             <ul>
                 <li><a href="" class="navbar-brand" id="brand">Wadi's B.</a></li>
@@ -127,8 +35,9 @@
     <div class="container">
         <div class="jumbotron" id="landing">
             <h3 class="welcome">Hi there,</h3>
-            <p>Welcome to Wadi's  travel blog. I hope you enjoy.</p>
-            <img src="https://wallpapercave.com/wp/wp5338846.png" alt="" style="margin: 10px; background-position: center;" width="40%" height="auto" class="img-responsive">
+            <p>Welcome to Wadi's travel blog. I hope you enjoy.</p>
+            <img src="https://wallpapercave.com/wp/wp5338846.png" alt=""
+                style="margin: 10px; background-position: center;" width="40%" height="auto" class="img-responsive">
         </div>
     </div>
     </div>
@@ -147,7 +56,7 @@
                             Stockholm and southwestern Gothenburg and Malmö, are all coastal. Stockholm is built on 14
                             islands. It has more than 50 bridges, as well as the medieval old town, Gamla Stan, royal
                             palaces and museums such as open-air Skansen.</p>
-                            <time>published: 14.06.2014, 12:14</time>
+                        <time>published: 14.06.2014, 12:14</time>
                     </article>
                 </div>
             </div>
@@ -162,13 +71,13 @@
                             capital, an ultramodern cityscape rises next to quiet canalside communities and the iconic
                             temples of Wat Arun, Wat Pho and the Emerald Buddha Temple (Wat Phra Kaew). Nearby beach
                             resorts include bustling Pattaya and fashionable Hua Hin. </p>
-                            <time>published: 14.06.2014, 12:14</time>
+                        <time>published: 14.06.2014, 12:14</time>
                     </article>
                 </div>
             </div>
 
             <div class="col-sm-4">
-                <div class = "card">
+                <div class="card">
                     <article>
                         <img src="https://wallpapercave.com/dwp1x/wp6535110.jpg" alt="Italy">
                         <h3>Italy</h3>
@@ -177,7 +86,7 @@
                             art and ancient ruins. Other major cities include Florence, with Renaissance masterpieces
                             such as Michelangelo’s "David" and Brunelleschi's Duomo; Venice, the city of canals; and
                             Milan, Italy’s fashion capital. </p>
-                            <time>published: 14.06.2014, 12:14</time>
+                        <time>published: 14.06.2014, 12:14</time>
                     </article>
                 </div>
             </div>
@@ -198,7 +107,7 @@
                             housing works by European masters. Segovia has a medieval castle (the Alcázar) and an intact
                             Roman aqueduct. Catalonia’s capital, Barcelona, is defined by Antoni Gaudí’s whimsical
                             modernist landmarks like the Sagrada Família church.</p>
-                            <time>published: 14.06.2014, 12:14</time>
+                        <time>published: 14.06.2014, 12:14</time>
                     </article>
                 </div>
             </div>
@@ -213,13 +122,13 @@
                             art and nightlife scenes, the Brandenburg Gate and many sites relating to WWII. Munich is
                             known for its Oktoberfest and beer halls, including the 16th-century Hofbräuhaus. Frankfurt,
                             with its skyscrapers, houses the European Central Bank. </p>
-                            <time>published: 14.06.2014, 12:14</time>
+                        <time>published: 14.06.2014, 12:14</time>
                     </article>
                 </div>
             </div>
 
             <div class="col-sm-4">
-                <div class ="card">
+                <div class="card">
                     <article>
                         <img src="https://wallpapercave.com/wp/wp4657062.jpg" alt="Kenya's wild animals">
                         <h3>Kenya</h3>
@@ -228,14 +137,16 @@
                             to wildlife like lions, elephants and rhinos. From Nairobi, the capital, safaris visit the
                             Maasai Mara Reserve, known for its annual wildebeest migrations, and Amboseli National Park,
                             offering views of Tanzania's 5,895m Mt. Kilimanjaro. </p>
-                            <time>published: 14.06.2014, 12:14</time>
+                        <time>published: 14.06.2014, 12:14</time>
                     </article>
                 </div>
             </div>
 
 
         </div>
-    </div>
+    </div> -->
+    <br><br>
+
 </body>
 
 </html>

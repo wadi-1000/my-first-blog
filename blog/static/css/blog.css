@@ -1,0 +1,97 @@
+    body {
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 700;
+        font-size: 14px;
+        display: block;
+        background: inherit;
+    }
+
+    #border {
+        border: 2px solid black;
+        border-radius: 5px;
+        max-width: 100%;
+    }
+
+    nav {
+        background-color: rgb(32, 32, 32);
+        font-family: 'Source Code Pro', monospace;
+        width: auto;
+        border-radius: 3px;
+
+    }
+
+    .welcome {
+        font-size: 2em;
+
+    }
+
+    nav ul {
+        overflow: hidden;
+        margin: 0%;
+        list-style-type: none;
+    }
+
+    nav li {
+        float: left;
+    }
+
+    nav li a {
+        padding: 14px 16px;
+        display: block;
+        text-align: center;
+        color: white;
+        font-family: cursive;
+        font-size: 1.2em;
+        text-decoration: none;
+        font-family: 'Source Code Pro';
+        font-weight: bold;
+    }
+
+    a:hover {
+        color: rgb(226, 221, 221);
+    }
+
+    #brand {
+        font-weight: 5px;
+        margin-top: 3px;
+        font-family: 'Source Code Pro';
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+    }
+
+    #landing {
+
+        background-color: white;
+        /* Used if the image is unavailable */
+        height: 500px;
+        /* You must set a specified height */
+        background-position: center;
+        /* Center the image */
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        /* Resize the background image to cover the entire container */
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        padding: 80px 10px;
+        font-family: 'Source Code Pro', monospace;
+        font-size: 2em;
+        border: 2px solid black;
+        border-radius: 5px;
+        max-width: 100%;
+        margin: 18px;
+    }
+
+    #cards img {
+        width: 355px;
+        height: 50%;
+    }
+
+    card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* this adds the "card" effect */
+        padding: 16px;
+        text-align: center;
+        background-color: lightgray;
+    }
